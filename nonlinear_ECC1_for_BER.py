@@ -21,7 +21,7 @@ import torch.nn.functional as F
 
 from tqdm.auto import tqdm
 
-from IPython.display import display
+# from IPython.display import display
 
 try:
     from google.colab import files, drive
@@ -1259,7 +1259,7 @@ for exp_idx, spec in enumerate(experiment_specs, start=1):
     final_eval_df.insert(7, "train_minutes", train_minutes)
 
     print("Final eval:")
-    display(final_eval_df)
+    # display(final_eval_df)
 
     final_eval_path = os.path.join(exp_dir, "final_eval.csv")
     final_eval_df.to_csv(final_eval_path, index=False)
@@ -1288,7 +1288,7 @@ for exp_idx, spec in enumerate(experiment_specs, start=1):
     final_wide_df.to_csv(FINAL_WIDE_CSV, index=False)
 
     print("Current wide table:")
-    display(final_wide_df)
+    # display(final_wide_df)
 
     # ----------------------------------------------------
     # Mark done
@@ -1356,9 +1356,9 @@ print("All sweep experiments finished or skipped.")
 if os.path.exists(FINAL_RESULTS_CSV):
     final_long_df = pd.read_csv(FINAL_RESULTS_CSV)
     print("Final long results:")
-    display(final_long_df)
+    # display(final_long_df)
 
 if os.path.exists(FINAL_WIDE_CSV):
     final_wide_df = pd.read_csv(FINAL_WIDE_CSV)
     print("Final wide results for table:")
-    display(final_wide_df)
+    # display(final_wide_df)
