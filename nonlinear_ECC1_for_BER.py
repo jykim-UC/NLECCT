@@ -948,11 +948,11 @@ def train_model_with_snapshots(
 
                     quick_eval_wide_df.to_csv(quick_eval_wide_csv, index=False)
 
-                    try:
-                        quick_eval_wide_df.to_excel(quick_eval_wide_xlsx, index=False)
-                    except Exception as e:
-                        print("Could not save xlsx. CSV was saved instead.")
-                        print("xlsx error:", e)
+                    # try:
+                    #     quick_eval_wide_df.to_excel(quick_eval_wide_xlsx, index=False)
+                    # except Exception as e:
+                    #     print("Could not save xlsx. CSV was saved instead.")
+                    #     print("xlsx error:", e)
 
                     print("Quick eval long format:")
                     # display(quick_eval_df)
