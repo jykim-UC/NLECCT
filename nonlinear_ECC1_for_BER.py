@@ -7,12 +7,20 @@
 # ============================================================
 
 import os, json, shutil, random, time
+
+# Headless server에서 matplotlib GUI/Qt backend 방지
+os.environ.setdefault("MPLBACKEND", "Agg")
+os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
+
 from pathlib import Path
 from datetime import datetime
 from dataclasses import dataclass, asdict
 
 import numpy as np
 import pandas as pd
+
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 import torch
@@ -954,16 +962,16 @@ def train_model_with_snapshots(
                     #     print("Could not save xlsx. CSV was saved instead.")
                     #     print("xlsx error:", e)
 
-                    print("Quick eval long format:")
+                    # print("Quick eval long format:")
                     # display(quick_eval_df)
 
-                    print("Quick eval wide format for Excel:")
+                    # print("Quick eval wide format for Excel:")
                     # display(quick_eval_wide_df.tail())
 
-                    print("Saved quick eval files:")
-                    print(" -", quick_eval_csv)
-                    print(" -", quick_eval_wide_csv)
-                    print(" -", quick_eval_wide_xlsx)
+                    # print("Saved quick eval files:")
+                    # print(" -", quick_eval_csv)
+                    # print(" -", quick_eval_wide_csv)
+                    # print(" -", quick_eval_wide_xlsx)
 
                     model.train()
 
