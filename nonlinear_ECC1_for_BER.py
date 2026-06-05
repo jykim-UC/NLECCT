@@ -823,7 +823,7 @@ def train_model_with_snapshots(
 
                 cur_lr = scheduler.get_last_lr()[0]
 
-                print(
+                pbar.write(
                     f"[PROGRESS] {exp_name} | "
                     f"step {step:,}/{cfg.train_iters:,} "
                     f"({percent:.2f}%) | "
@@ -859,7 +859,7 @@ def train_model_with_snapshots(
                 elapsed_min = (time.time() - t0) / 60
                 percent = 100.0 * step / cfg.train_iters
 
-                print(
+                pbar.write(
                     f"[SNAPSHOT] {exp_name} | "
                     f"step {step:7d}/{cfg.train_iters} ({percent:.2f}%) | "
                     f"loss={float(met['loss']):.5f} | "
@@ -1230,8 +1230,8 @@ for exp_idx, spec in enumerate(experiment_specs, start=1):
         download_checkpoint=DOWNLOAD_CHECKPOINT,
 
         # 진행률 출력 주기
-        progress_every=10_000,
-        pbar_update_every=100,
+        progress_every=100_000,
+        pbar_update_every=500,
     )
 
     train_minutes = (time.time() - t_exp) / 60
