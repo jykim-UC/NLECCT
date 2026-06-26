@@ -1,0 +1,31 @@
+{
+  "exp_name": "POLAR_32_11_small_N2_d32",
+  "code": "POLAR(32,11)",
+  "arch": "small_N2_d32",
+  "n": 32,
+  "k": 11,
+  "num_layers": 2,
+  "d_model": 32,
+  "train_minutes": 145.24171286026638,
+  "done_at": "2026-06-05T20:02:01.543677",
+  "config": {
+    "n": 32,
+    "k": 11,
+    "d_model": 32,
+    "num_heads": 8,
+    "num_decoder_layers": 2,
+    "encoder_hidden": 128,
+    "encoder_layers": 2,
+    "batch_size": 1024,
+    "train_iters": 1000000,
+    "lr": 0.0001,
+    "lr_min": 1e-06,
+    "grad_clip": 1.0,
+    "train_ebn0_min": 1,
+    "train_ebn0_max": 8,
+    "seed": 42,
+    "device": "cuda",
+    "code_name": "POLAR(32,11)",
+    "arch_name": "small_N2_d32"
+  }
+}

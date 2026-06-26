@@ -1,0 +1,31 @@
+{
+  "exp_name": "BCH_31_16_large_N6_d128",
+  "code": "BCH(31,16)",
+  "arch": "large_N6_d128",
+  "n": 31,
+  "k": 16,
+  "num_layers": 6,
+  "d_model": 128,
+  "train_minutes": 737.2082777221998,
+  "done_at": "2026-06-08T02:25:45.125512",
+  "config": {
+    "n": 31,
+    "k": 16,
+    "d_model": 128,
+    "num_heads": 8,
+    "num_decoder_layers": 6,
+    "encoder_hidden": 128,
+    "encoder_layers": 2,
+    "batch_size": 1024,
+    "train_iters": 1000000,
+    "lr": 0.0001,
+    "lr_min": 1e-06,
+    "grad_clip": 1.0,
+    "train_ebn0_min": 1,
+    "train_ebn0_max": 8,
+    "seed": 42,
+    "device": "cuda",
+    "code_name": "BCH(31,16)",
+    "arch_name": "large_N6_d128"
+  }
+}
